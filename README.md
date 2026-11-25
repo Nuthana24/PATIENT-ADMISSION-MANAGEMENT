@@ -1,11 +1,189 @@
+# Patient Admission Management System
+
+A web-based Hospital Patient Admission Management System developed using React and FastAPI. The application helps hospital administrators manage patient records, admissions, wards, and departments through a centralized dashboard.
+
+## Live Application
+
+- **Frontend:** https://patient-admission-management-gamma.vercel.app
+- **Backend API:** https://patient-admission-management-bktu.onrender.com/api
+- **API Documentation:** https://patient-admission-management-bktu.onrender.com/docs
+
+> Note: Frontend and backend deployment are available, but production API connectivity is pending CORS verification.
+
+## Technology Stack
+
+### Frontend
+- React.js
+- Vite
+- JavaScript
+- CSS
+
+### Backend
+- Python
+- FastAPI
+- SQLAlchemy
+- SQLite
+
+### Deployment
+- GitHub – Source code management
+- Vercel – Frontend hosting
+- Render – Backend hosting
+
+## Features
+
+- Hospital dashboard with patient statistics
+- Patient registration and management
+- Patient directory
+- Patient admission management
+- Ward management
+- Department management
+- Ward and department details
+- Patient record search and management
+- Dashboard statistics
+
+## Project Structure
+
+```text
+patient-admission-management/
+│
+├── backend/
+│   ├── main.py
+│   ├── requirements.txt
+│   └── ...
+│
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   ├── vite.config.js
+│   └── ...
+│
+├── README.md
+└── .gitignore
+```
+
+## Installation and Setup
+
+### Prerequisites
+
+- Python 3.10 or later
+- Node.js and npm
+- Git
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/YOUR-USERNAME/patient-admission-management.git
+cd patient-admission-management
+```
+
+### 2. Setup Backend
+
+```bash
+cd backend
+python -m venv .venv
+```
+
+Activate the virtual environment on Windows:
+
+```powershell
+.venv\Scripts\activate
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Start the backend:
+
+```bash
+uvicorn main:app --reload --port 8000
+```
+
+Backend URL:
+
+http://127.0.0.1:8000
+
+API documentation:
+
+http://127.0.0.1:8000/docs
+
+### 3. Setup Frontend
+
+Open another terminal:
+
+```bash
+cd frontend
+npm install
+```
+
+Create a `.env` file inside the frontend folder:
+
+```env
+VITE_API_URL=http://127.0.0.1:8000/api
+```
+
+Start the frontend:
+
+```bash
+npm run dev
+```
+
+Frontend URL:
+
+http://localhost:5173
+
+## Deployment Information
+
+| Component | Hosting Platform |
+|---|---|
+| Frontend | Vercel |
+| Backend | Render |
+| Source Code | GitHub |
+
+## Application Screenshots
+
+Add your application screenshots in a folder named `screenshots`.
+
+```text
+screenshots/
+├── dashboard.png
+├── patient-directory.png
+├── patient-registration.png
+├── ward-management.png
+└── department-management.png
+```
+
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### Patient Directory
+![Patient Directory](screenshots/patient-directory.png)
+
+### Patient Registration
+![Patient Registration](screenshots/patient-registration.png)
+
+### Ward Management
+![Ward Management](screenshots/ward-management.png)
+
+### Department Management
+![Department Management](screenshots/department-management.png)
+
+## Author
+
+Developed as a Patient Admission Management System project.
+
+---
+
+**Note:** Do not commit passwords, secret keys, `.env` files, or databases containing real patient information to GitHub.
+
 # CareFlow — Patient Admission Management App
 
 A responsive full-stack patient admission management application built for the DScribe Software Engineer Intern Round 1 task.
 
-## Tech stack
-- **Frontend:** React.js, Vite, JavaScript, CSS
-- **Backend:** Python, FastAPI, Pydantic
-- **Database:** SQLite with SQLAlchemy ORM
 
 The backend is Python (not Node.js), as required. SQLite stores records in `backend/patients.db`, which is created automatically and persists across backend restarts.
 
