@@ -32,16 +32,18 @@ class Patient(Base):
 Base.metadata.create_all(bind=engine)
 app = FastAPI(title="Patient Admission Management API", version="1.0.0")
 
+from fastapi.middleware.cors import CORSMiddleware
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-    "https://patient-admission-management-9bdyn5ojv.vercel.app"
-],
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "https://patient-admission-management-gamma.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
-    allow_headers=["*"]
+    allow_headers=["*"],
 )
 
 def get_db():
